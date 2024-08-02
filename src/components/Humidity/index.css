@@ -1,0 +1,30 @@
+.humidity-container {
+  height: 15vh;
+  width: 49%;
+  background-color: #ffffff;
+  border: 0 solid;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.humidity-icon {
+  font-size: 28px;
+  color: rgb(16, 142, 161);
+}
+
+.humidity {
+  font-family: "Tangerine";
+  font-size: 28px;
+  font-weight: bold;
+  margin: 8px 0 8px 0;
+}
+
+.humidity-percent {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: normal;
+}
