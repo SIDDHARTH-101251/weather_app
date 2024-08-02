@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import WeatherMap from "./pages/WeatherMap";
+import Chat from "./pages/Chat";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [isSmallDevice, setIsSmallDevice] = useState(window.innerWidth < 768);
+
+  const handleResize = () => {
+    setIsSmallDevice(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {isSmallDevice && (
+          <>
+            <Route path="/map" element={<WeatherMap />} />
+            <Route path="/chat" element={<Chat />} />
+          </>
+        )}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
