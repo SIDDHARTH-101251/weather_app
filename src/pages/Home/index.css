@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  height: auto;
+  padding: 8px 8px 60px 8px;
+}
+
+.wind-humidity-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 8px 0 0 0;
+}
+
+.pressure-visibility-clouds-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 8px 0 0 0;
+}
+
+.loader-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-location-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  z-index: 1000;
+  border: 0 solid rgb(16, 142, 161);
+  border-top-width: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-icon-container {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 18px;
+}
+
+.search-input-element-style {
+  width: 80%;
+  border: 0 solid;
+  outline: none;
+  padding: 12px;
+  font-size: 18px;
+  font-family: "Roboto";
+}
+
+.location-icon-container {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-icon {
+  font-size: 18px;
+}
+
+.bg-img-summer-day-sm {
+  background: url("../../../public/summer-day-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-summer-night-sm {
+  background: url("../../../public/summer-night-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-winter-day-sm {
+  background: url("../../../public/winter-day-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-winter-night-sm {
+  background: url("../../../public/winter-night-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-autumn-day-sm {
+  background: url("../../../public/autumn-day-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-autumn-night-sm {
+  background: url("../../../public/autumn-night-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-monsoon-day-sm {
+  background: url("../../../public/monsoon-day-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-monsoon-night-sm {
+  background: url("../../../public/monsoon-night-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-spring-day-sm {
+  background: url("../../../public/spring-day-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-spring-night-sm {
+  background: url("../../../public/spring-night-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-pre-winter-day-sm {
+  background: url("../../../public/pre-winter-day-sm.jpg");
+  background-size: cover;
+}
+
+.bg-img-pre-winter-night-sm {
+  background: url("../../../public/pre-winter-night-sm.jpg");
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .app-container {
+    padding: 8px 8px 8px 8px;
+  }
+}
