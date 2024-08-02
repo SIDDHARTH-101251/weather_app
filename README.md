@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A brief description of what this project does and who it's for
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The Weather App is a user-friendly application designed to provide accurate and up-to-date weather information. With an intuitive interface and a variety of features, users can easily stay informed about current weather conditions, forecasts, and more.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Current Weather: Get real-time weather updates for your location.
+- Forecast: View weather forecasts for the next 5 days.
+- Search Locations: Check weather conditions for different cities worldwide.
+- User-friendly Interface: Simple and clean design for easy navigation.
+- Weather Map: You can see weather map of your locationn.
+- AI: Integrated with AI, which will give you some tips, for good food, good health, and exercise. You can ask any thing to it.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+![Large Device Preview](screenshots/large.png)
+_Screenshot of the app in large devices._
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Large Device Preview](screenshots/medium.png)
+_Screenshot of the app in medium devices._
 
-### `npm run build`
+<img src="screenshots/small.png" alt="Home Screen" width="400">
+Screenshot of the app in small devices.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To install the Weather App, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 1. Clone the repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/SIDDHARTH-101251/weather-app.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### a. Navigate to the project's Frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd weatherFrontend
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### b. Install dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### c. Start the application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm Start
+```
 
-### Code Splitting
+## Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### a. Navigate to the project's Backend
 
-### Analyzing the Bundle Size
+```bash
+cd weatherBackend
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### b. Install dependencies
 
-### Making a Progressive Web App
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### c. Start the server
 
-### Advanced Configuration
+```bash
+node index.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
 
-### Deployment
+- Launch the App: Open the app on your device.
+- View Current Weather: The homepage displays the current weather for your location.
+- Search for a City: Use the search bar to find weather information for any city.
+- Check Forecast: Navigate to the forecast section to see upcoming weather conditions.
+- Chat with AI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Technologies Used
 
-### `npm run build` fails to minify
+- Frontend: React, leaflet.js
+- Backend: Node.js, Express
+- API: OpenWeatherMap API, OpenAI
+- Styling: CSS, Bootstrap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributing
+
+- We welcome contributions! If you’d like to contribute, please follow these steps:
+  - Fork the repository.
+  - Create a new branch (git checkout -b feature/your-feature).
+  - Commit your changes (git commit -am 'Add some feature').
+  - Push to the branch (git push origin feature/your-feature).
+  - Create a new Pull Request.
+
+## LICENSE
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact us at 21052029@kiit.ac.in
