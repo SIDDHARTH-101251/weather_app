@@ -1,0 +1,30 @@
+.forecast-container {
+  height: 450px;
+  width: 100%;
+  background-color: white;
+  border: 0 solid;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .forecast-container {
+    height: 40%;
+    width: 100%;
+    border-radius: 0;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-top-color: rgb(16, 142, 161);
+    border-bottom-color: rgb(16, 142, 161);
+    background-color: #ffffff;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1014px) {
+  .forecast-container {
+    height: 40%;
+    width: 100%;
+    background-color: white;
+    border-radius: 0;
+  }
+}
