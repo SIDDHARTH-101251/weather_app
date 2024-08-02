@@ -1,0 +1,30 @@
+.clouds-container {
+  width: 32%;
+  height: 15vh;
+  border: 0 solid;
+  border-radius: 12px;
+  background-color: #ffffff;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cloud-icon {
+  font-size: 28px;
+  color: rgb(16, 142, 161);
+}
+
+.weather {
+  font-family: "Tangerine";
+  font-size: 28px;
+  font-weight: bold;
+  margin: 8px 0 8px 0;
+}
+
+.description {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: normal;
+}
