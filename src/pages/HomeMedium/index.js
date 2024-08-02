@@ -64,7 +64,7 @@ class HomeMedium extends Component {
     const { lat, lon } = this.state;
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OPEN_WEATHER_MAP_API}&units=metric`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -100,10 +100,10 @@ class HomeMedium extends Component {
 
   updateLocationData = async () => {
     const { name } = this.state;
-    const apiKey = process.env.REACT_APP_API_KEY;
+    const apiKey = process.env.REACT_APP_OPEN_WEATHER_MAP_API;
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${name}&appid=${apiKey}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${name}&appid=${apiKey}`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);

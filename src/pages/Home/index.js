@@ -119,7 +119,7 @@ class Home extends Component {
     const apiKey = process.env.REACT_APP_OPEN_WEATHER_MAP_API;
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${name}&appid=${apiKey}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${name}&appid=${apiKey}`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
