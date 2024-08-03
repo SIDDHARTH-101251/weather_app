@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import "./index.css";
 import axios from "axios";
 import { useState, useRef, useEffect } from "react";
@@ -8,6 +9,7 @@ function ChatElement(props) {
 
   const [prompt, setPrompt] = useState("");
   const [responses, setResponses] = useState([]); // Initialize state to hold the list of responses
+  const [loading, setLoading] = useState(false); // Loading state
   const inputRef = useRef(null);
 
   // Function to generate the initial prompt based on weatherData
@@ -23,7 +25,9 @@ function ChatElement(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!prompt.trim()) return; // Avoid empty prompts
 
+    setLoading(true); // Start loading
     setResponses([...responses, { prompt, response: <BeatLoader /> }]); // Append the prompt with a loading status
 
     axios
@@ -38,6 +42,15 @@ function ChatElement(props) {
       })
       .catch((err) => {
         console.log(err);
+        setResponses((prevResponses) => {
+          const newResponses = [...prevResponses];
+          newResponses[newResponses.length - 1].response =
+            "Error fetching data.";
+          return newResponses;
+        });
+      })
+      .finally(() => {
+        setLoading(false); // Stop loading
       });
   };
 
@@ -63,8 +76,12 @@ function ChatElement(props) {
             ref={inputRef}
             rows="1"
           />
-          <button type="submit" className="get-advice-button-style">
-            Get Advice
+          <button
+            type="submit"
+            className="get-advice-button-style"
+            disabled={loading}
+          >
+            {loading ? <BeatLoader size={8} /> : "Get Advice"}
           </button>
         </form>
       </div>
@@ -104,7 +121,7 @@ function ChatElement(props) {
                     alt="tenali-response"
                     className="tenali-response"
                   />
-                  {res.response}
+                  <ReactMarkdown>{String(res.response)}</ReactMarkdown>
                 </p>
               </div>
             ))
