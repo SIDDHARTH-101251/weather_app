@@ -27,6 +27,8 @@ function ChatElement(props) {
     e.preventDefault();
     if (!prompt.trim()) return; // Avoid empty prompts
 
+    console.log(process.env.REACT_APP_BACKEND_URL); // Log the backend URL
+
     setLoading(true); // Start loading
     setResponses([...responses, { prompt, response: <BeatLoader /> }]); // Append the prompt with a loading status
 
