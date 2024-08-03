@@ -31,7 +31,7 @@ function ChatElement(props) {
     setResponses([...responses, { prompt, response: <BeatLoader /> }]); // Append the prompt with a loading status
 
     axios
-      .post("http://localhost:8000/chat", { prompt })
+      .post(`${process.env.REACT_APP_BACKEND_URL}/chat`, { prompt })
       .then((res) => {
         setResponses((prevResponses) => {
           const newResponses = [...prevResponses];
