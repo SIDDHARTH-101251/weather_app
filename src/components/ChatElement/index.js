@@ -123,7 +123,11 @@ function ChatElement(props) {
                     alt="tenali-response"
                     className="tenali-response"
                   />
-                  <ReactMarkdown>{String(res.response)}</ReactMarkdown>
+                  {loading ? (
+                    <BeatLoader size={8} />
+                  ) : (
+                    <ReactMarkdown>{String(res.response)}</ReactMarkdown>
+                  )}
                 </p>
               </div>
             ))
